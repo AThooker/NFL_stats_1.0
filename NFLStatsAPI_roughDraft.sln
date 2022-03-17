@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFLStatsAPI_roughDraft", "NFLStatsAPI_roughDraft\NFLStatsAPI_roughDraft.csproj", "{91E6029E-7393-40F4-B4B4-E9F6C6B7CB2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91E6029E-7393-40F4-B4B4-E9F6C6B7CB2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E6029E-7393-40F4-B4B4-E9F6C6B7CB2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E6029E-7393-40F4-B4B4-E9F6C6B7CB2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E6029E-7393-40F4-B4B4-E9F6C6B7CB2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51C26FFA-669B-46EA-BEE3-214C29BC61AA}
+	EndGlobalSection
+EndGlobal
