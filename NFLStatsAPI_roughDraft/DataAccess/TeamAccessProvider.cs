@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace NFLStatsAPI_roughDraft.DataAccess
 {
-    public class DataAccessProvider : IDataAccessProvider
+    public class TeamAccessProvider : ITeamAccessProvider
     {
         private readonly PostgreSqlContext _context;
-        public DataAccessProvider(PostgreSqlContext context)
+        public TeamAccessProvider(PostgreSqlContext context)
         {
             _context = context;
         }
+
+        //-----------TEAMS-----------  
         public List<Team> GetTeams()
         {
             return _context.teams.ToList();

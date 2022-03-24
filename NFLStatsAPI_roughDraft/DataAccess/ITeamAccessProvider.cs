@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NFLStatsAPI_roughDraft.DataAccess
 {
-    public interface IDataAccessProvider
+    public interface ITeamAccessProvider
     {
         void UpdateTeam(Team team);
         void DeleteTeam(int id);

@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NFLStatsAPI_roughDraft.DataAccess;
 using NFLStatsAPI_roughDraft.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using NFLStatsAPI_roughDraft.DataAccess;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,10 +11,10 @@ namespace NFLStatsAPI_roughDraft.Controllers
     [ApiController]
     public class TeamsController : ControllerBase
     {
-        private readonly IDataAccessProvider _dataAccessProvider;
-        public TeamsController(IDataAccessProvider dataAccessProvider)
+        private readonly ITeamAccessProvider _teamAccessProvider;
+        public TeamsController(ITeamAccessProvider teamAccessProvider)
         {
-            _dataAccessProvider = dataAccessProvider;
+            _teamAccessProvider = teamAccessProvider;
         }
 
         //No need for posting teams, not yet anyways
@@ -32,14 +29,14 @@ namespace NFLStatsAPI_roughDraft.Controllers
         [HttpGet]
         public List<Team> Get()
         {
-            return _dataAccessProvider.GetTeams();
+            return _teamAccessProvider.GetTeams();
         }
 
         // GET api/<TeamsController>/5
         [HttpGet("{id}")]
         public Team TeamDetails(int id)
         {
-            return _dataAccessProvider.GetTeamInfoById(id);
+            return _teamAccessProvider.GetTeamInfoById(id);
         }
 
         
@@ -50,7 +47,7 @@ namespace NFLStatsAPI_roughDraft.Controllers
         {
             if(ModelState.IsValid)
             {
-                _dataAccessProvider.UpdateTeam(team);
+                _teamAccessProvider.UpdateTeam(team);
                 return Ok();
             }
             return BadRequest();
@@ -60,12 +57,12 @@ namespace NFLStatsAPI_roughDraft.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var team = _dataAccessProvider.GetTeamInfoById(id);
+            var team = _teamAccessProvider.GetTeamInfoById(id);
             if(team == null)
             {
                 return NotFound();
             }
-            _dataAccessProvider.DeleteTeam(id);
+            _teamAccessProvider.DeleteTeam(id);
             return Ok();
         }
     }

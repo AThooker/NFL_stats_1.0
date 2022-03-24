@@ -39,3 +39,4 @@ C:\Users\17654\Desktop\NFL_Stats_Proj\NFLStatsAPI_roughDraft\NFLStatsAPI_roughDr
 C:\Users\17654\Desktop\NFL_Stats_Proj\NFLStatsAPI_roughDraft\NFLStatsAPI_roughDraft\obj\Debug\netcoreapp3.1\NFLStatsAPI_roughDraft.dll
 C:\Users\17654\Desktop\NFL_Stats_Proj\NFLStatsAPI_roughDraft\NFLStatsAPI_roughDraft\obj\Debug\netcoreapp3.1\NFLStatsAPI_roughDraft.pdb
 C:\Users\17654\Desktop\NFL_Stats_Proj\NFLStatsAPI_roughDraft\NFLStatsAPI_roughDraft\obj\Debug\netcoreapp3.1\NFLStatsAPI_roughDraft.genruntimeconfig.cache
+C:\Users\17654\Desktop\NFL_Stats_Proj\NFLStatsAPI_roughDraft\NFLStatsAPI_roughDraft\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
