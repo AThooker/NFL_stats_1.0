@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,7 +11,9 @@ namespace NFLStatsAPI_roughDraft.Models
     {
         [Key]
         public int standingsId { get; set; }
+        [ForeignKey(nameof(teamName))]
         public int team_id { get; set; }
+        public virtual string teamName { get; set; }
         public string season { get; set; }
         //Number of Games Played
         public int g { get; set; }
@@ -18,12 +21,13 @@ namespace NFLStatsAPI_roughDraft.Models
         public int w { get; set; }
         //losses
         public int l { get; set; }
+        public int t { get; set; }
         public decimal w_to_l_percent { get; set; }
         //points for
         public int pf { get; set; }
-        //points against
+        //points allowed
         public int pa { get; set; }
-        //points differential Scored - Against
+        //points differential Scored - Allowed
         public int pd { get; set; }
         //margin of victory (Points Scored - Points Allowed) / Games Played
         public decimal mov { get; set; }

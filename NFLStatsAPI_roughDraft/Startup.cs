@@ -35,6 +35,7 @@ namespace NFLStatsAPI_roughDraft
 
             services.AddScoped<ITeamAccessProvider, TeamAccessProvider>();
             services.AddScoped<IStandingsAccessProvider, StandingsAccessProvider>();
+            services.AddScoped<IScheduleAccessProvider, ScheduleAccessProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

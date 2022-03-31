@@ -16,6 +16,7 @@ namespace NFLStatsAPI_roughDraft.DataAccess
         }
         public DbSet<Team> teams { get; set; }
         public DbSet<Standings> standings { get; set; }
+        public DbSet<Schedule> schedules { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
